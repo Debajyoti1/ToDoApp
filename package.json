@@ -1,0 +1,21 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "ToDoApp created using node framework Express JS and mongo DB to store data",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ToDoApp",
+    "ToDo"
+  ],
+  "author": "Debajyoti Dutta",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
