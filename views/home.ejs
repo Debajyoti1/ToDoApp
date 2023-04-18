@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="heading">My ToDo App</h1>
+        <div id="input-box">
+            <form action="/add" method="post">
+                <textarea required placeholder="Title" type="text" name="title" rows="2" cols="40"></textarea>
+                <textarea required placeholder="Description" type="text" name="description" rows="5" cols="40"></textarea>
+                <input required id="dt" type="date" name="date">
+                <button type="submit" id="btn-add">Add</button>
+            </form>
+        </div>
+        <h2 id="todo-heading">My ToDos</h2>
+        <div id="todos">
+            <div class="todo-item">
+                <h4 class="title">This is a check</h4>
+                <p class="description">This is a test</p>
+                <p>Date</p>
+                <button type="submit" class="btn-delete">Delete</button>
+            </div>
+            <% for (let i of todo_items) {%>
+                <div class="todo-item">
+                <h4 class="title"><%=i.title%></h4>
+                <p class="description"><%=i.description%></p>
+                <p><%=i.target_date.toISOString().substring(0, 10)%></p>
+                <a href="/delete?id=<%=i._id%>"><button type="submit" class="btn-delete">Delete</button></a>
+                </div>
+            <%}%>
+        </div>
+    </div>
+</body>
+
+</html>
