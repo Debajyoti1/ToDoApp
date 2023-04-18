@@ -1,10 +1,11 @@
+// Load environment variables from .env file
+require('dotenv').config();
+
 // Import required modules
 const express = require('express'); // Web framework for Node.js
 const dotenv = require('dotenv'); // Loads environment variables from a .env file
 const mongoose = require('./config/mongoose'); // MongoDB config file is called to initiate DB connection
 
-// Load environment variables from .env file
-dotenv.config();
 
 // Create an instance of the Express application
 const app = express();

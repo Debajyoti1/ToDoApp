@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const MONGOOSE_URI=process.env.MONGOOSE_URI || 'mongodb://localhost:27017/todo_app'
-// console.log(MONGOOSE_URI);
+
 mongoose.connect(MONGOOSE_URI)
 
 const db=mongoose.connection
