@@ -23,13 +23,9 @@
             </form>
         </div>
         <h2 id="todo-heading">My ToDos</h2>
-        <div id="todos">
-            <div class="todo-item">
-                <h4 class="title">This is a check</h4>
-                <p class="description">This is a test</p>
-                <p>Date</p>
-                <button type="submit" class="btn-delete">Delete</button>
-            </div>
+        <% if (todo_items==undefined || todo_items.length<=0) {%>
+            <h4 style="text-align: center;">No items found</h4> 
+        <%}%>
             <% for (let i of todo_items) {%>
                 <div class="todo-item">
                 <h4 class="title"><%=i.title%></h4>

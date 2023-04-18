@@ -2,7 +2,6 @@ const TodoItem=require('../models/todo-item')
 
 module.exports.home=async (req,res)=>{
     let TodoItems=await TodoItem.find({})
-    // console.log(TodoItems);
     return res.render('home',{
         title: "My Todo App",
         todo_items: TodoItems
