@@ -1,9 +1,14 @@
-const express=require('express')
-const router=express.Router()
+// Require the express module and create a new router object
+const express = require('express');
+const router = express.Router();
 
-const homeController=require('../controllers/home_controller')
+// Require the home_controller module
+const homeController = require('../controllers/home_controller');
 
-router.get('/',homeController.home)
-router.post('/add',homeController.add)
-router.get('/delete',homeController.delete)
-module.exports=router
+// Define routes using the router object
+router.get('/', homeController.home); // GET request for the root URL
+router.post('/add', homeController.add); // POST request for adding an item
+router.get('/delete', homeController.delete); // GET request for deleting an item
+
+// Export the router object for use in other modules
+module.exports = router;
